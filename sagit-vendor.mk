@@ -257,6 +257,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libarcsoft_dualcam_refocus.so:system/vendor/lib/libarcsoft_dualcam_refocus.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libaudcal.so:system/vendor/lib/libaudcal.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libblurbuster.so:system/vendor/lib/libblurbuster.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libbtnv.so:system/vendor/lib/libbtnv.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libc2d30-a5xx.so:system/vendor/lib/libc2d30-a5xx.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libc2d30_bltlib.so:system/vendor/lib/libc2d30_bltlib.so \
@@ -514,13 +515,24 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libdpmtcm.so:system/vendor/lib/libdpmtcm.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libdsi_netctrl.so:system/vendor/lib/libdsi_netctrl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libdsutils.so:system/vendor/lib/libdsutils.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libdualcameraddm.so:system/vendor/lib/libdualcameraddm.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libedge_smooth_hvx_stub.so:system/vendor/lib/libedge_smooth_hvx_stub.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libfastcvadsp_stub.so:system/vendor/lib/libfastcvadsp_stub.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libfastcvopt.so:system/vendor/lib/libfastcvopt.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libfiltergenerator.so:system/vendor/lib/libfiltergenerator.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libflash_pmic.so:system/vendor/lib/libflash_pmic.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libhwdaphal.so:system/vendor/lib/libhwdaphal.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libidl.so:system/vendor/lib/libidl.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libjni_blurbuster.so:system/vendor/lib/libjni_blurbuster.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libjni_chromaflash.so:system/vendor/lib/libjni_chromaflash.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libjni_dualcamera.so:system/vendor/lib/libjni_dualcamera.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libjni_filtergenerator.so:system/vendor/lib/libjni_filtergenerator.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libjni_makeupV2.so:system/vendor/lib/libjni_makeupV2.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libjni_optizoom.so:system/vendor/lib/libjni_optizoom.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libjni_sharpshooter.so:system/vendor/lib/libjni_sharpshooter.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libjni_stillmore.so:system/vendor/lib/libjni_stillmore.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libjni_ubifocus.so:system/vendor/lib/libjni_ubifocus.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libjpegdhw.so:system/vendor/lib/libjpegdhw.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libjpegdmahw.so:system/vendor/lib/libjpegdmahw.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libjpegehw.so:system/vendor/lib/libjpegehw.so \
@@ -740,7 +752,17 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/gatekeeper.msm8998.so:system/vendor/lib64/hw/gatekeeper.msm8998.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/keystore.msm8998.so:system/vendor/lib64/hw/keystore.msm8998.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/vulkan.msm8998.so:system/vendor/lib64/hw/vulkan.msm8998.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libblurbuster.so:system/vendor/lib64/libblurbuster.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libchromaflash.so:system/vendor/lib64/libchromaflash.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-dplmedia.so:system/vendor/lib64/lib-dplmedia.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libjni_blurbuster.so:system/vendor/lib64/libjni_blurbuster.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libjni_chromaflash.so:system/vendor/lib64/libjni_chromaflash.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libjni_clearsight.so:system/vendor/lib64/libjni_clearsight.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libjni_makeupV2.so:system/vendor/li64b/libjni_makeupV2.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libjni_optizoom.so:system/vendor/lib64/libjni_optizoom.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libjni_sharpshooter.so:system/vendor/lib64/libjni_sharpshooter.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libjni_stillmore.so:system/vendor/lib64/libjni_stillmore.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libjni_ubifocus.so:system/vendor/lib64/libjni_ubifocus.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-ims-rcscmjni.so:system/vendor/lib64/lib-ims-rcscmjni.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-imsSDP.so:system/vendor/lib64/lib-imsSDP.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-imscamera.so:system/vendor/lib64/lib-imscamera.so \
@@ -838,6 +860,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libmm-disp-apis.so:system/vendor/lib64/libmm-disp-apis.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libmm-qdcm.so:system/vendor/lib64/libmm-qdcm.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libmmosal.so:system/vendor/lib64/libmmosal.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/liboptizoom.so:system/vendor/lib64/liboptizoom.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libnetmgr.so:system/vendor/lib64/libnetmgr.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libpdmapper.so:system/vendor/lib64/libpdmapper.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libpdnotifier.so:system/vendor/lib64/libpdnotifier.so \
@@ -878,6 +901,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libsdmextension.so:system/vendor/lib64/libsdmextension.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libsecureui.so:system/vendor/lib64/libsecureui.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libsecureui_svcsock.so:system/vendor/lib64/libsecureui_svcsock.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libseemore.so:system/vendor/lib64/libseemore.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libsensor1.so:system/vendor/lib64/libsensor1.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libsensor_reg.so:system/vendor/lib64/libsensor_reg.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libsensor_test.so:system/vendor/lib64/libsensor_test.so \
