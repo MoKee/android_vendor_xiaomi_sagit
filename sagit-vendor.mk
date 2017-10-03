@@ -57,11 +57,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/etc/acdbdata/Forte/Forte_workspaceFile.qwsp:system/etc/acdbdata/Forte/Forte_workspaceFile.qwsp \
     vendor/xiaomi/sagit/proprietary/etc/acdbdata/adsp_avs_config.acdb:system/etc/acdbdata/adsp_avs_config.acdb \
     vendor/xiaomi/sagit/proprietary/etc/cacert_location.pem:system/etc/cacert_location.pem \
-    vendor/xiaomi/sagit/proprietary/etc/camera/camera_config.xml:system/etc/camera/camera_config.xml \
-    vendor/xiaomi/sagit/proprietary/etc/camera/imx268_chromatix.xml:system/etc/camera/imx268_chromatix.xml \
-    vendor/xiaomi/sagit/proprietary/etc/camera/imx386_semco_chromatix.xml:system/etc/camera/imx386_semco_chromatix.xml \
-    vendor/xiaomi/sagit/proprietary/etc/camera/s5k3m3_semco_chromatix.xml:system/etc/camera/s5k3m3_semco_chromatix.xml \
-    vendor/xiaomi/sagit/proprietary/etc/camera/sagit_imx268_liteon_chromatix.xml:system/etc/camera/sagit_imx268_liteon_chromatix.xml \
     vendor/xiaomi/sagit/proprietary/etc/cne/SwimConfig.xml:system/etc/cne/SwimConfig.xml \
     vendor/xiaomi/sagit/proprietary/etc/cne/andsfCne.xml:system/etc/cne/andsfCne.xml \
     vendor/xiaomi/sagit/proprietary/etc/cne/wqeclient/ATT/ATT_profile1.xml:system/etc/cne/wqeclient/ATT/ATT_profile1.xml \
