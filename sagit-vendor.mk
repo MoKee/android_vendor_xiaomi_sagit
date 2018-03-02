@@ -17,7 +17,6 @@
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/bin/dpmd:system/bin/dpmd \
     vendor/xiaomi/sagit/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
-    vendor/xiaomi/sagit/proprietary/etc/calib.cfg:system/etc/calib.cfg \
     vendor/xiaomi/sagit/proprietary/etc/camera/camera_config.xml:system/etc/camera/camera_config.xml \
     vendor/xiaomi/sagit/proprietary/etc/camera/imx268_chromatix.xml:system/etc/camera/imx268_chromatix.xml \
     vendor/xiaomi/sagit/proprietary/etc/camera/imx386_semco_chromatix.xml:system/etc/camera/imx386_semco_chromatix.xml \
@@ -39,20 +38,22 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/etc/firmware/cpp_firmware_v1_8_0.fw:system/etc/firmware/cpp_firmware_v1_8_0.fw \
     vendor/xiaomi/sagit/proprietary/etc/firmware/tfa98xx_aac.cnt:system/etc/firmware/tfa98xx_aac.cnt \
     vendor/xiaomi/sagit/proprietary/etc/firmware/tfa98xx_ssi.cnt:system/etc/firmware/tfa98xx_ssi.cnt \
+    vendor/xiaomi/sagit/proprietary/etc/init/dpmd.rc:system/etc/init/dpmd.rc \
     vendor/xiaomi/sagit/proprietary/etc/jdi_fhd_cmd_incell_dsi_panel_ct.xml:system/etc/jdi_fhd_cmd_incell_dsi_panel_ct.xml \
-    vendor/xiaomi/sagit/proprietary/etc/modem/Diag.cfg:system/etc/modem/Diag.cfg \
     vendor/xiaomi/sagit/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/com.qti.location.sdk.xml:system/etc/permissions/com.qti.location.sdk.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/com.qti.snapdragon.sdk.display.xml:system/etc/permissions/com.qti.snapdragon.sdk.display.xml \
+    vendor/xiaomi/sagit/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/com.xiaomi.sensor.xml:system/etc/permissions/com.xiaomi.sensor.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/dpmapi.xml:system/etc/permissions/dpmapi.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/embms.xml:system/etc/permissions/embms.xml \
+    vendor/xiaomi/sagit/proprietary/etc/permissions/izat.xt.srv.xml:system/etc/permissions/izat.xt.srv.xml \
+    vendor/xiaomi/sagit/proprietary/etc/permissions/privapp-permissions-com.qualcomm.location.xml:system/etc/permissions/privapp-permissions-com.qualcomm.location.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/qti-vzw-ims-internal.xml:system/etc/permissions/qti-vzw-ims-internal.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
-    vendor/xiaomi/sagit/proprietary/etc/permissions/radioconfig.xml:system/etc/permissions/radioconfig.xml \
     vendor/xiaomi/sagit/proprietary/etc/permissions/telephonyservice.xml:system/etc/permissions/telephonyservice.xml \
     vendor/xiaomi/sagit/proprietary/etc/qdcm_calib_data_jdi_fhd_cmd_incell_dsi_panel.xml:system/etc/qdcm_calib_data_jdi_fhd_cmd_incell_dsi_panel.xml \
     vendor/xiaomi/sagit/proprietary/etc/qdcm_calib_data_lgd_fhd_cmd_incell_dsi_panel.xml:system/etc/qdcm_calib_data_lgd_fhd_cmd_incell_dsi_panel.xml \
@@ -64,26 +65,44 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/framework/com.quicinc.cne.api-V1.0-java.jar:system/framework/com.quicinc.cne.api-V1.0-java.jar \
     vendor/xiaomi/sagit/proprietary/framework/com.quicinc.cne.jar:system/framework/com.quicinc.cne.jar \
     vendor/xiaomi/sagit/proprietary/framework/com.xiaomi.sensor.jar:system/framework/com.xiaomi.sensor.jar \
+    vendor/xiaomi/sagit/proprietary/framework/dpm.jar:system/framework/dpm.jar \
     vendor/xiaomi/sagit/proprietary/framework/dpmapi.jar:system/framework/dpmapi.jar \
     vendor/xiaomi/sagit/proprietary/framework/embmslibrary.jar:system/framework/embmslibrary.jar \
     vendor/xiaomi/sagit/proprietary/framework/izat.xt.srv.jar:system/framework/izat.xt.srv.jar \
+    vendor/xiaomi/sagit/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/xiaomi/sagit/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
+    vendor/xiaomi/sagit/proprietary/lib/com.qualcomm.qti.dpm.api@1.0.so:system/lib/com.qualcomm.qti.dpm.api@1.0.so \
+    vendor/xiaomi/sagit/proprietary/lib/com.qualcomm.qti.imscmservice@1.0.so:system/lib/com.qualcomm.qti.imscmservice@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
+    vendor/xiaomi/sagit/proprietary/lib/lib-imscamera.so:system/lib/lib-imscamera.so \
+    vendor/xiaomi/sagit/proprietary/lib/lib-imsvideocodec.so:system/lib/lib-imsvideocodec.so \
+    vendor/xiaomi/sagit/proprietary/lib/lib-imsvtextutils.so:system/lib/lib-imsvtextutils.so \
+    vendor/xiaomi/sagit/proprietary/lib/lib-imsvtutils.so:system/lib/lib-imsvtutils.so \
+    vendor/xiaomi/sagit/proprietary/lib/libGPTEE_system.so:system/lib/libGPTEE_system.so \
     vendor/xiaomi/sagit/proprietary/lib/libMiCameraHal.so:system/lib/libMiCameraHal.so \
+    vendor/xiaomi/sagit/proprietary/lib/libQTEEConnector_system.so:system/lib/libQTEEConnector_system.so \
     vendor/xiaomi/sagit/proprietary/lib/libcalapi.so:system/lib/libcalapi.so \
+    vendor/xiaomi/sagit/proprietary/lib/libdiag_system.so:system/lib/libdiag_system.so \
     vendor/xiaomi/sagit/proprietary/lib/libdpmctmgr.so:system/lib/libdpmctmgr.so \
     vendor/xiaomi/sagit/proprietary/lib/libdpmfdmgr.so:system/lib/libdpmfdmgr.so \
     vendor/xiaomi/sagit/proprietary/lib/libdpmframework.so:system/lib/libdpmframework.so \
     vendor/xiaomi/sagit/proprietary/lib/libdpmnsrm.so:system/lib/libdpmnsrm.so \
     vendor/xiaomi/sagit/proprietary/lib/libdpmtcm.so:system/lib/libdpmtcm.so \
     vendor/xiaomi/sagit/proprietary/lib/libhbtpjni.so:system/lib/libhbtpjni.so \
+    vendor/xiaomi/sagit/proprietary/lib/libimscamera_jni.so:system/lib/libimscamera_jni.so \
+    vendor/xiaomi/sagit/proprietary/lib/libimsmedia_jni.so:system/lib/libimsmedia_jni.so \
     vendor/xiaomi/sagit/proprietary/lib/liblocationservice_jni.so:system/lib/liblocationservice_jni.so \
     vendor/xiaomi/sagit/proprietary/lib/libmmosal.so:system/lib/libmmosal.so \
+    vendor/xiaomi/sagit/proprietary/lib/libmmrtpdecoder.so:system/lib/libmmrtpdecoder.so \
+    vendor/xiaomi/sagit/proprietary/lib/libmmrtpencoder.so:system/lib/libmmrtpencoder.so \
     vendor/xiaomi/sagit/proprietary/lib/libmorpho_group_portrait.so:system/lib/libmorpho_group_portrait.so \
     vendor/xiaomi/sagit/proprietary/lib/libmorpho_memory_allocator.so:system/lib/libmorpho_memory_allocator.so \
     vendor/xiaomi/sagit/proprietary/lib/libmorpho_panorama.so:system/lib/libmorpho_panorama.so \
     vendor/xiaomi/sagit/proprietary/lib/libmorpho_panorama_gp.so:system/lib/libmorpho_panorama_gp.so \
     vendor/xiaomi/sagit/proprietary/lib/libqminvapi.so:system/lib/libqminvapi.so \
+    vendor/xiaomi/sagit/proprietary/lib/libqti-perfd-client_system.so:system/lib/libqti-perfd-client_system.so \
+    vendor/xiaomi/sagit/proprietary/lib/libqti_performance.so:system/lib/libqti_performance.so \
+    vendor/xiaomi/sagit/proprietary/lib/librcc.so:system/lib/librcc.so \
     vendor/xiaomi/sagit/proprietary/lib/libsd_sdk_display.so:system/lib/libsd_sdk_display.so \
     vendor/xiaomi/sagit/proprietary/lib/libsensor_cal.so:system/lib/libsensor_cal.so \
     vendor/xiaomi/sagit/proprietary/lib/libsensor_calJNI.so:system/lib/libsensor_calJNI.so \
@@ -91,6 +110,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/lib/libsns_low_lat_stream_stub.so:system/lib/libsns_low_lat_stream_stub.so \
     vendor/xiaomi/sagit/proprietary/lib/libtrueportrait.so:system/lib/libtrueportrait.so \
     vendor/xiaomi/sagit/proprietary/lib/libvendorconn.so:system/lib/libvendorconn.so \
+    vendor/xiaomi/sagit/proprietary/lib/libvr_amb_engine.so:system/lib/libvr_amb_engine.so \
+    vendor/xiaomi/sagit/proprietary/lib/libvr_object_engine.so:system/lib/libvr_object_engine.so \
+    vendor/xiaomi/sagit/proprietary/lib/libvr_sam_wrapper.so:system/lib/libvr_sam_wrapper.so \
+    vendor/xiaomi/sagit/proprietary/lib/libvraudio.so:system/lib/libvraudio.so \
     vendor/xiaomi/sagit/proprietary/lib/libxt_native.so:system/lib/libxt_native.so \
     vendor/xiaomi/sagit/proprietary/lib/vendor.display.color@1.0.so:system/lib/vendor.display.color@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib/vendor.display.postproc@1.0.so:system/lib/vendor.display.postproc@1.0.so \
@@ -100,16 +123,24 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/lib/vendor.qti.hardware.improvetouch.gesturemanager@1.0.so:system/lib/vendor.qti.hardware.improvetouch.gesturemanager@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so:system/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib/vendor.qti.hardware.iop@1.0.so:system/lib/vendor.qti.hardware.iop@1.0.so \
+    vendor/xiaomi/sagit/proprietary/lib/vendor.qti.hardware.iop@2.0.so:system/lib/vendor.qti.hardware.iop@2.0.so \
     vendor/xiaomi/sagit/proprietary/lib/vendor.qti.hardware.perf@1.0.so:system/lib/vendor.qti.hardware.perf@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib/vendor.qti.hardware.qdutils_disp@1.0.so:system/lib/vendor.qti.hardware.qdutils_disp@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib/vendor.qti.hardware.qteeconnector@1.0.so:system/lib/vendor.qti.hardware.qteeconnector@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib/vendor.qti.hardware.tui_comm@1.0.so:system/lib/vendor.qti.hardware.tui_comm@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib/vendor.qti.hardware.vpp@1.1.so:system/lib/vendor.qti.hardware.vpp@1.1.so \
+    vendor/xiaomi/sagit/proprietary/lib/vendor.qti.imsrtpservice@1.0.so:system/lib/vendor.qti.imsrtpservice@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/com.qualcomm.qti.dpm.api@1.0.so:system/lib64/com.qualcomm.qti.dpm.api@1.0.so \
+    vendor/xiaomi/sagit/proprietary/lib64/com.qualcomm.qti.imscmservice@1.0.so:system/lib64/com.qualcomm.qti.imscmservice@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/com.qualcomm.qti.wifidisplayhal@1.0.so:system/lib64/com.qualcomm.qti.wifidisplayhal@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/hw/consumerir.default.so:system/lib64/hw/consumerir.default.so \
     vendor/xiaomi/sagit/proprietary/lib64/lib-imscamera.so:system/lib64/lib-imscamera.so \
+    vendor/xiaomi/sagit/proprietary/lib64/lib-imsvideocodec.so:system/lib64/lib-imsvideocodec.so \
     vendor/xiaomi/sagit/proprietary/lib64/lib-imsvt.so:system/lib64/lib-imsvt.so \
+    vendor/xiaomi/sagit/proprietary/lib64/lib-imsvtextutils.so:system/lib64/lib-imsvtextutils.so \
+    vendor/xiaomi/sagit/proprietary/lib64/lib-imsvtutils.so:system/lib64/lib-imsvtutils.so \
+    vendor/xiaomi/sagit/proprietary/lib64/libGPTEE_system.so:system/lib64/libGPTEE_system.so \
+    vendor/xiaomi/sagit/proprietary/lib64/libQTEEConnector_system.so:system/lib64/libQTEEConnector_system.so \
     vendor/xiaomi/sagit/proprietary/lib64/libcalapi.so:system/lib64/libcalapi.so \
     vendor/xiaomi/sagit/proprietary/lib64/libdiag_system.so:system/lib64/libdiag_system.so \
     vendor/xiaomi/sagit/proprietary/lib64/libdpmctmgr.so:system/lib64/libdpmctmgr.so \
@@ -122,7 +153,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
     vendor/xiaomi/sagit/proprietary/lib64/liblocationservice_jni.so:system/lib64/liblocationservice_jni.so \
     vendor/xiaomi/sagit/proprietary/lib64/libmmosal.so:system/lib64/libmmosal.so \
+    vendor/xiaomi/sagit/proprietary/lib64/libmmrtpdecoder.so:system/lib64/libmmrtpdecoder.so \
+    vendor/xiaomi/sagit/proprietary/lib64/libmmrtpencoder.so:system/lib64/libmmrtpencoder.so \
     vendor/xiaomi/sagit/proprietary/lib64/libqminvapi.so:system/lib64/libqminvapi.so \
+    vendor/xiaomi/sagit/proprietary/lib64/libqti-perfd-client_system.so:system/lib64/libqti-perfd-client_system.so \
+    vendor/xiaomi/sagit/proprietary/lib64/libqti_performance.so:system/lib64/libqti_performance.so \
     vendor/xiaomi/sagit/proprietary/lib64/librcc.so:system/lib64/librcc.so \
     vendor/xiaomi/sagit/proprietary/lib64/libsd_sdk_display.so:system/lib64/libsd_sdk_display.so \
     vendor/xiaomi/sagit/proprietary/lib64/libsensor_cal.so:system/lib64/libsensor_cal.so \
@@ -130,6 +165,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/lib64/libsensor_test.so:system/lib64/libsensor_test.so \
     vendor/xiaomi/sagit/proprietary/lib64/libsns_low_lat_stream_stub.so:system/lib64/libsns_low_lat_stream_stub.so \
     vendor/xiaomi/sagit/proprietary/lib64/libvendorconn.so:system/lib64/libvendorconn.so \
+    vendor/xiaomi/sagit/proprietary/lib64/libvr_amb_engine.so:system/lib64/libvr_amb_engine.so \
+    vendor/xiaomi/sagit/proprietary/lib64/libvr_object_engine.so:system/lib64/libvr_object_engine.so \
+    vendor/xiaomi/sagit/proprietary/lib64/libvr_sam_wrapper.so:system/lib64/libvr_sam_wrapper.so \
+    vendor/xiaomi/sagit/proprietary/lib64/libvraudio.so:system/lib64/libvraudio.so \
     vendor/xiaomi/sagit/proprietary/lib64/libxt_native.so:system/lib64/libxt_native.so \
     vendor/xiaomi/sagit/proprietary/lib64/vendor.display.color@1.0.so:system/lib64/vendor.display.color@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/vendor.display.postproc@1.0.so:system/lib64/vendor.display.postproc@1.0.so \
@@ -139,12 +178,13 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/lib64/vendor.qti.hardware.improvetouch.gesturemanager@1.0.so:system/lib64/vendor.qti.hardware.improvetouch.gesturemanager@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so:system/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/vendor.qti.hardware.iop@1.0.so:system/lib64/vendor.qti.hardware.iop@1.0.so \
+    vendor/xiaomi/sagit/proprietary/lib64/vendor.qti.hardware.iop@2.0.so:system/lib64/vendor.qti.hardware.iop@2.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/vendor.qti.hardware.perf@1.0.so:system/lib64/vendor.qti.hardware.perf@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/vendor.qti.hardware.qdutils_disp@1.0.so:system/lib64/vendor.qti.hardware.qdutils_disp@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/vendor.qti.hardware.qteeconnector@1.0.so:system/lib64/vendor.qti.hardware.qteeconnector@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/vendor.qti.hardware.tui_comm@1.0.so:system/lib64/vendor.qti.hardware.tui_comm@1.0.so \
     vendor/xiaomi/sagit/proprietary/lib64/vendor.qti.hardware.vpp@1.1.so:system/lib64/vendor.qti.hardware.vpp@1.1.so \
-    vendor/xiaomi/sagit/proprietary/vendor/bin/ATFWD-daemon:vendor/bin/ATFWD-daemon \
+    vendor/xiaomi/sagit/proprietary/lib64/vendor.qti.imsrtpservice@1.0.so:system/lib64/vendor.qti.imsrtpservice@1.0.so \
     vendor/xiaomi/sagit/proprietary/vendor/bin/adsprpcd:vendor/bin/adsprpcd \
     vendor/xiaomi/sagit/proprietary/vendor/bin/btnvtool:vendor/bin/btnvtool \
     vendor/xiaomi/sagit/proprietary/vendor/bin/cnd:vendor/bin/cnd \
@@ -152,7 +192,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/bin/cnss_diag:vendor/bin/cnss_diag \
     vendor/xiaomi/sagit/proprietary/vendor/bin/dpmQmiMgr:vendor/bin/dpmQmiMgr \
     vendor/xiaomi/sagit/proprietary/vendor/bin/energy-awareness:vendor/bin/energy-awareness \
-    vendor/xiaomi/sagit/proprietary/vendor/bin/fstman:vendor/bin/fstman \
     vendor/xiaomi/sagit/proprietary/vendor/bin/hbtp_daemon:vendor/bin/hbtp_daemon \
     vendor/xiaomi/sagit/proprietary/vendor/bin/hci_qcomm_init:vendor/bin/hci_qcomm_init \
     vendor/xiaomi/sagit/proprietary/vendor/bin/hvdcp_opti:vendor/bin/hvdcp_opti \
@@ -167,6 +206,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/bin/ims_rtp_daemon:vendor/bin/ims_rtp_daemon \
     vendor/xiaomi/sagit/proprietary/vendor/bin/imsdatadaemon:vendor/bin/imsdatadaemon \
     vendor/xiaomi/sagit/proprietary/vendor/bin/imsqmidaemon:vendor/bin/imsqmidaemon \
+    vendor/xiaomi/sagit/proprietary/vendor/bin/imsrcsd:vendor/bin/imsrcsd \
     vendor/xiaomi/sagit/proprietary/vendor/bin/ipacm-diag:vendor/bin/ipacm-diag \
     vendor/xiaomi/sagit/proprietary/vendor/bin/irsc_util:vendor/bin/irsc_util \
     vendor/xiaomi/sagit/proprietary/vendor/bin/loc_launcher:vendor/bin/loc_launcher \
@@ -177,18 +217,16 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/bin/pd-mapper:vendor/bin/pd-mapper \
     vendor/xiaomi/sagit/proprietary/vendor/bin/pm-proxy:vendor/bin/pm-proxy \
     vendor/xiaomi/sagit/proprietary/vendor/bin/pm-service:vendor/bin/pm-service \
+    vendor/xiaomi/sagit/proprietary/vendor/bin/port-bridge:vendor/bin/port-bridge \
     vendor/xiaomi/sagit/proprietary/vendor/bin/qseecomd:vendor/bin/qseecomd \
     vendor/xiaomi/sagit/proprietary/vendor/bin/qti:vendor/bin/qti \
     vendor/xiaomi/sagit/proprietary/vendor/bin/rmt_storage:vendor/bin/rmt_storage \
     vendor/xiaomi/sagit/proprietary/vendor/bin/sensors.qcom:vendor/bin/sensors.qcom \
     vendor/xiaomi/sagit/proprietary/vendor/bin/slim_daemon:vendor/bin/slim_daemon \
-    vendor/xiaomi/sagit/proprietary/vendor/bin/ssr_diag:vendor/bin/ssr_diag \
-    vendor/xiaomi/sagit/proprietary/vendor/bin/ssr_setup:vendor/bin/ssr_setup \
     vendor/xiaomi/sagit/proprietary/vendor/bin/tftp_server:vendor/bin/tftp_server \
     vendor/xiaomi/sagit/proprietary/vendor/bin/thermal-engine:vendor/bin/thermal-engine \
     vendor/xiaomi/sagit/proprietary/vendor/bin/time_daemon:vendor/bin/time_daemon \
     vendor/xiaomi/sagit/proprietary/vendor/bin/wcnss_filter:vendor/bin/wcnss_filter \
-    vendor/xiaomi/sagit/proprietary/vendor/bin/xtra-daemon:vendor/bin/xtra-daemon \
     vendor/xiaomi/sagit/proprietary/vendor/bin/xtwifi-client:vendor/bin/xtwifi-client \
     vendor/xiaomi/sagit/proprietary/vendor/bin/xtwifi-inet-agent:vendor/bin/xtwifi-inet-agent \
     vendor/xiaomi/sagit/proprietary/vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb:vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb \
@@ -200,6 +238,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb:vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb \
     vendor/xiaomi/sagit/proprietary/vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp:vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp \
     vendor/xiaomi/sagit/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:vendor/etc/acdbdata/adsp_avs_config.acdb \
+    vendor/xiaomi/sagit/proprietary/vendor/etc/cacert_location.pem:vendor/etc/cacert_location.pem \
     vendor/xiaomi/sagit/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml \
     vendor/xiaomi/sagit/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml:vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml \
     vendor/xiaomi/sagit/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml:vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml \
@@ -266,11 +305,15 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/firmware/ipa_fws.mdt:vendor/firmware/ipa_fws.mdt \
     vendor/xiaomi/sagit/proprietary/vendor/firmware/libpn553_fw.so:vendor/firmware/libpn553_fw.so \
     vendor/xiaomi/sagit/proprietary/vendor/framework/qti-vzw-ims-internal.jar:vendor/framework/qti-vzw-ims-internal.jar \
-    vendor/xiaomi/sagit/proprietary/vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar:vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
     vendor/xiaomi/sagit/proprietary/vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar:vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so:vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-impl.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-impl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0_vendor.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0_vendor.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/com.quicinc.cne.api@1.0.so:vendor/lib/com.quicinc.cne.api@1.0.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/com.quicinc.cne.constants@1.0.so:vendor/lib/com.quicinc.cne.constants@1.0.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/com.quicinc.cne.constants@2.0.so:vendor/lib/com.quicinc.cne.constants@2.0.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/com.quicinc.cne.server@2.0.so:vendor/lib/com.quicinc.cne.server@2.0.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/egl/eglSubDriverAndroid.so:vendor/lib/egl/eglSubDriverAndroid.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/egl/libEGL_adreno.so:vendor/lib/egl/libEGL_adreno.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:vendor/lib/egl/libGLESv1_CM_adreno.so \
@@ -286,10 +329,24 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/hw/vendor.qti.gnss@1.0-impl.so:vendor/lib/hw/vendor.qti.gnss@1.0-impl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/hw/vendor.qti.hardware.iop@1.0-impl.so:vendor/lib/hw/vendor.qti.hardware.iop@1.0-impl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so:vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/hw/vr.msm8998.so:vendor/lib/hw/vr.msm8998.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/hw/vulkan.msm8998.so:vendor/lib/hw/vulkan.msm8998.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/lib-imscmservice.so:vendor/lib/lib-imscmservice.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/lib-imsdpl.so:vendor/lib/lib-imsdpl.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/lib-imsqimf.so:vendor/lib/lib-imsqimf.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/lib-imsrcs-v2.so:vendor/lib/lib-imsrcs-v2.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/lib-imsxml.so:vendor/lib/lib-imsxml.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/lib-rtpcore.so:vendor/lib/lib-rtpcore.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/lib-rtpdaemoninterface.so:vendor/lib/lib-rtpdaemoninterface.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/lib-rtpsl.so:vendor/lib/lib-rtpsl.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/lib-uceservice.so:vendor/lib/lib-uceservice.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libC2D2.so:vendor/lib/libC2D2.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libCB.so:vendor/lib/libCB.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libDRPlugin.so:vendor/lib/libDRPlugin.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libFaceGrade.so:vendor/lib/libFaceGrade.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libGPTEE_vendor.so:vendor/lib/libGPTEE_vendor.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libGPreqcancel.so:vendor/lib/libGPreqcancel.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libGPreqcancel_svc.so:vendor/lib/libGPreqcancel_svc.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libI420colorconvert.so:vendor/lib/libI420colorconvert.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libOmxAacDec.so:vendor/lib/libOmxAacDec.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libOmxEvrcDec.so:vendor/lib/libOmxEvrcDec.so \
@@ -298,8 +355,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libOmxVpp.so:vendor/lib/libOmxVpp.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libOpenCL.so:vendor/lib/libOpenCL.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libQSEEComAPI.so:vendor/lib/libQSEEComAPI.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libQTEEConnector_vendor.so:vendor/lib/libQTEEConnector_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libRSDriver_adreno.so:vendor/lib/libRSDriver_adreno.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libSecureUILib.so:vendor/lib/libSecureUILib.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libSonyIMX386PdafLibrary.so:vendor/lib/libSonyIMX386PdafLibrary.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libStDrvInt.so:vendor/lib/libStDrvInt.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libStereoRectification.so:vendor/lib/libStereoRectification.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libXMFD_AgeGender.so:vendor/lib/libXMFD_AgeGender.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/lib_lowlight.so:vendor/lib/lib_lowlight.so \
@@ -314,7 +374,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libadm.so:vendor/lib/libadm.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libadreno_utils.so:vendor/lib/libadreno_utils.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libadsp_default_listener.so:vendor/lib/libadsp_default_listener.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libadsp_hvx_callback_skel.so:vendor/lib/libadsp_hvx_callback_skel.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libadsp_hvx_stub.so:vendor/lib/libadsp_hvx_stub.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libadsprpc.so:vendor/lib/libadsprpc.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libalarmservice_jni.so:vendor/lib/libalarmservice_jni.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libarcsoft_beauty_shot.so:vendor/lib/libarcsoft_beauty_shot.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libarcsoft_beautyshot.so:vendor/lib/libarcsoft_beautyshot.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libarcsoft_beautyshot_image_algorithm.so:vendor/lib/libarcsoft_beautyshot_image_algorithm.so \
@@ -572,12 +635,21 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libcneapiclient.so:vendor/lib/libcneapiclient.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libcneqmiutils.so:vendor/lib/libcneqmiutils.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libcsm_data.so:vendor/lib/libcsm_data.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libdataitems.so:vendor/lib/libdataitems.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libdiag.so:vendor/lib/libdiag.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libdpmqmihal.so:vendor/lib/libdpmqmihal.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libdrmfs.so:vendor/lib/libdrmfs.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libdrmtime.so:vendor/lib/libdrmtime.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libdrplugin_client.so:vendor/lib/libdrplugin_client.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libdsi_netctrl.so:vendor/lib/libdsi_netctrl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libdsutils.so:vendor/lib/libdsutils.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libevent_observer.so:vendor/lib/libevent_observer.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libfastcvadsp_stub.so:vendor/lib/libfastcvadsp_stub.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libfastcvopt.so:vendor/lib/libfastcvopt.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libflash_pmic.so:vendor/lib/libflash_pmic.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libflp.so:vendor/lib/libflp.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libgdtap.so:vendor/lib/libgdtap.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libgeofence.so:vendor/lib/libgeofence.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libgnsspps.so:vendor/lib/libgnsspps.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libgsl.so:vendor/lib/libgsl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libhbtpclient.so:vendor/lib/libhbtpclient.so \
@@ -585,9 +657,15 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libhbtpfrmwk.so:vendor/lib/libhbtpfrmwk.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libhwdaphal.so:vendor/lib/libhwdaphal.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libidl.so:vendor/lib/libidl.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libizat_client_api.so:vendor/lib/libizat_client_api.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libizat_core.so:vendor/lib/libizat_core.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libjpegdhw.so:vendor/lib/libjpegdhw.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libjpegdmahw.so:vendor/lib/libjpegdmahw.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libjpegehw.so:vendor/lib/libjpegehw.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libkeymasterdeviceutils.so:vendor/lib/libkeymasterdeviceutils.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libkeymasterprovision.so:vendor/lib/libkeymasterprovision.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libkeymasterutils.so:vendor/lib/libkeymasterutils.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/liblbs_core.so:vendor/lib/liblbs_core.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libllvm-glnext.so:vendor/lib/libllvm-glnext.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libllvm-qcom.so:vendor/lib/libllvm-qcom.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libllvm-qgl.so:vendor/lib/libllvm-qgl.so \
@@ -720,10 +798,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libois_bu63164.so:vendor/lib/libois_bu63164.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libois_lc898122.so:vendor/lib/libois_lc898122.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/liboptizoom.so:vendor/lib/liboptizoom.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libperfgluelayer.so:vendor/lib/libperfgluelayer.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libperipheral_client.so:vendor/lib/libperipheral_client.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqcci_legacy.so:vendor/lib/libqcci_legacy.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqdi.so:vendor/lib/libqdi.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqdp.so:vendor/lib/libqdp.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libqisl.so:vendor/lib/libqisl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqmi.so:vendor/lib/libqmi.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqmi_cci.so:vendor/lib/libqmi_cci.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqmi_client_helper.so:vendor/lib/libqmi_client_helper.so \
@@ -737,24 +817,37 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqomx_jpegenc.so:vendor/lib/libqomx_jpegenc.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqomx_jpegenc_pipe.so:vendor/lib/libqomx_jpegenc_pipe.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqseed3.so:vendor/lib/libqseed3.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libqti-iopd-client.so:vendor/lib/libqti-iopd-client.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libqti-iopd.so:vendor/lib/libqti-iopd.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqti-perfd-client.so:vendor/lib/libqti-perfd-client.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libqti-perfd.so:vendor/lib/libqti-perfd.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqti-util.so:vendor/lib/libqti-util.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqti-utils.so:vendor/lib/libqti-utils.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libqtigef.so:vendor/lib/libqtigef.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libquipc_os_api.so:vendor/lib/libquipc_os_api.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libremosaic_daemon.so:vendor/lib/libremosaic_daemon.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/librpmb.so:vendor/lib/librpmb.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/librs_adreno.so:vendor/lib/librs_adreno.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/librs_adreno_sha1.so:vendor/lib/librs_adreno_sha1.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libsac.so:vendor/lib/libsac.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libsdm-disp-vndapis.so:vendor/lib/libsdm-disp-vndapis.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libsecureui.so:vendor/lib/libsecureui.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libsecureui_svcsock.so:vendor/lib/libsecureui_svcsock.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libseemore.so:vendor/lib/libseemore.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libsensor1.so:vendor/lib/libsensor1.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libsensor_reg.so:vendor/lib/libsensor_reg.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libsensor_user_cal.so:vendor/lib/libsensor_user_cal.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libslimclient.so:vendor/lib/libslimclient.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libsmemlog.so:vendor/lib/libsmemlog.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libsmwrapper.so:vendor/lib/libsmwrapper.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libsns_low_lat_stream_stub.so:vendor/lib/libsns_low_lat_stream_stub.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libspcom.so:vendor/lib/libspcom.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libspl.so:vendor/lib/libspl.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libssd.so:vendor/lib/libssd.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libtinyxml2_1.so:vendor/lib/libtinyxml2_1.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libtzdrmgenprov.so:vendor/lib/libtzdrmgenprov.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libubifocus.so:vendor/lib/libubifocus.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/libulp2.so:vendor/lib/libulp2.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libvpphvx.so:vendor/lib/libvpphvx.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libvpplibrary.so:vendor/lib/libvpplibrary.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/libvqzip.so:vendor/lib/libvqzip.so \
@@ -772,16 +865,20 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so:vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so:vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_skel.so:vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_skel.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libadsp_fd_skel.so:vendor/lib/rfsa/adsp/libadsp_fd_skel.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so:vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libadsp_hvx_skel.so:vendor/lib/rfsa/adsp/libadsp_hvx_skel.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libapps_mem_heap.so:vendor/lib/rfsa/adsp/libapps_mem_heap.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libdirac-capiv2.so:vendor/lib/rfsa/adsp/libdirac-capiv2.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libdspCV_skel.so:vendor/lib/rfsa/adsp/libdspCV_skel.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libexternal_dog_skel.so:vendor/lib/rfsa/adsp/libexternal_dog_skel.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libfastcvadsp.so:vendor/lib/rfsa/adsp/libfastcvadsp.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libfastcvadsp_skel.so:vendor/lib/rfsa/adsp/libfastcvadsp_skel.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libhvxMathVIO.so:vendor/lib/rfsa/adsp/libhvxMathVIO.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so:vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libscveFaceLandmark_skel.so:vendor/lib/rfsa/adsp/libscveFaceLandmark_skel.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libscveT2T_skel.so:vendor/lib/rfsa/adsp/libscveT2T_skel.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so:vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libvpp_frc.so:vendor/lib/rfsa/adsp/libvpp_frc.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/rfsa/adsp/libvpp_svc_skel.so:vendor/lib/rfsa/adsp/libvpp_svc_skel.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/sensor_calibrate.so:vendor/lib/sensor_calibrate.so \
@@ -802,11 +899,13 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so:vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0_vendor.so:vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so:vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.iop@2.0_vendor.so:vendor/lib/vendor.qti.hardware.iop@2.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so:vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so:vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so:vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.radio.am@1.0_vendor.so:vendor/lib/vendor.qti.hardware.radio.am@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so:vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.0_vendor.so:vendor/lib/vendor.qti.hardware.radio.ims@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.radio.lpa@1.0_vendor.so:vendor/lib/vendor.qti.hardware.radio.lpa@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so:vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so:vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so \
@@ -815,9 +914,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so:vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so:vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so:vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so:vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.imsrtpservice@1.0_vendor.so:vendor/lib/vendor.qti.imsrtpservice@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib/vendor.qti.voiceprint@1.0.so:vendor/lib/vendor.qti.voiceprint@1.0.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/com.fingerprints.extension@1.0.so:vendor/lib64/com.fingerprints.extension@1.0.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so:vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so:vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so:vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0-impl.so:vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0-impl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0_vendor.so:vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0_vendor.so \
@@ -837,22 +939,28 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/gatekeeper.msm8998.so:vendor/lib64/hw/gatekeeper.msm8998.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/keystore.msm8998.so:vendor/lib64/hw/keystore.msm8998.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/sound_trigger.primary.msm8998.so:vendor/lib64/hw/sound_trigger.primary.msm8998.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so:vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so:vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so:vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so:vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/vr.msm8998.so:vendor/lib64/hw/vr.msm8998.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/hw/vulkan.msm8998.so:vendor/lib64/hw/vulkan.msm8998.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-dplmedia.so:vendor/lib64/lib-dplmedia.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-imscmservice.so:vendor/lib64/lib-imscmservice.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-imsdpl.so:vendor/lib64/lib-imsdpl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-imsqimf.so:vendor/lib64/lib-imsqimf.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-imsrcs-v2.so:vendor/lib64/lib-imsrcs-v2.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-imsxml.so:vendor/lib64/lib-imsxml.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-rtpcommon.so:vendor/lib64/lib-rtpcommon.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-rtpcore.so:vendor/lib64/lib-rtpcore.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-rtpdaemoninterface.so:vendor/lib64/lib-rtpdaemoninterface.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-rtpsl.so:vendor/lib64/lib-rtpsl.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/lib-uceservice.so:vendor/lib64/lib-uceservice.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libC2D2.so:vendor/lib64/libC2D2.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libCB.so:vendor/lib64/libCB.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libDRPlugin.so:vendor/lib64/libDRPlugin.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libGPTEE_vendor.so:vendor/lib64/libGPTEE_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libGPreqcancel.so:vendor/lib64/libGPreqcancel.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libGPreqcancel_svc.so:vendor/lib64/libGPreqcancel_svc.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libI420colorconvert.so:vendor/lib64/libI420colorconvert.so \
@@ -862,10 +970,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libOmxVpp.so:vendor/lib64/libOmxVpp.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libOpenCL.so:vendor/lib64/libOpenCL.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libQSEEComAPI.so:vendor/lib64/libQSEEComAPI.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libQTEEConnector_vendor.so:vendor/lib64/libQTEEConnector_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libRSDriver_adreno.so:vendor/lib64/libRSDriver_adreno.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libSecureUILib.so:vendor/lib64/libSecureUILib.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libStDrvInt.so:vendor/lib64/libStDrvInt.so \
-    vendor/xiaomi/sagit/proprietary/vendor/lib64/lib_drplugin_server.so:vendor/lib64/lib_drplugin_server.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libacdb-fts.so:vendor/lib64/libacdb-fts.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libacdbloader.so:vendor/lib64/libacdbloader.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libacdbrtac.so:vendor/lib64/libacdbrtac.so \
@@ -910,11 +1018,13 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libidl.so:vendor/lib64/libidl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libizat_client_api.so:vendor/lib64/libizat_client_api.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libizat_core.so:vendor/lib64/libizat_core.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libkeymasterdeviceutils.so:vendor/lib64/libkeymasterdeviceutils.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libkeymasterprovision.so:vendor/lib64/libkeymasterprovision.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libkeymasterutils.so:vendor/lib64/libkeymasterutils.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/liblbs_core.so:vendor/lib64/liblbs_core.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libllvm-glnext.so:vendor/lib64/libllvm-glnext.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libllvm-qcom.so:vendor/lib64/libllvm-qcom.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libllvm-qgl.so:vendor/lib64/libllvm-qgl.so \
-    vendor/xiaomi/sagit/proprietary/vendor/lib64/libloc_api_v02.so:vendor/lib64/libloc_api_v02.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libloc_ds_api.so:vendor/lib64/libloc_ds_api.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libloc_externalDr.so:vendor/lib64/libloc_externalDr.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/liblocationservice.so:vendor/lib64/liblocationservice.so \
@@ -945,7 +1055,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libqmi_encdec.so:vendor/lib64/libqmi_encdec.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libqmiservices.so:vendor/lib64/libqmiservices.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libqseed3.so:vendor/lib64/libqseed3.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libqti-iopd-client.so:vendor/lib64/libqti-iopd-client.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libqti-iopd.so:vendor/lib64/libqti-iopd.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libqti-perfd-client.so:vendor/lib64/libqti-perfd-client.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libqti-perfd.so:vendor/lib64/libqti-perfd.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libqti-util.so:vendor/lib64/libqti-util.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libqti-utils.so:vendor/lib64/libqti-utils.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libquipc_os_api.so:vendor/lib64/libquipc_os_api.so \
@@ -971,11 +1084,13 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libslimclient.so:vendor/lib64/libslimclient.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libsmemlog.so:vendor/lib64/libsmemlog.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libsns_low_lat_stream_stub.so:vendor/lib64/libsns_low_lat_stream_stub.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libspcom.so:vendor/lib64/libspcom.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libspl.so:vendor/lib64/libspl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libssd.so:vendor/lib64/libssd.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libsystem_health_mon.so:vendor/lib64/libsystem_health_mon.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libthermalioctl.so:vendor/lib64/libthermalioctl.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libtinyxml2_1.so:vendor/lib64/libtinyxml2_1.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/libtzdrmgenprov.so:vendor/lib64/libtzdrmgenprov.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libulp2.so:vendor/lib64/libulp2.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libvpphvx.so:vendor/lib64/libvpphvx.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/libvpplibrary.so:vendor/lib64/libvpplibrary.so \
@@ -1003,6 +1118,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so:vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0_vendor.so:vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so:vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so \
+    vendor/xiaomi/sagit/proprietary/vendor/lib64/vendor.qti.hardware.iop@2.0_vendor.so:vendor/lib64/vendor.qti.hardware.iop@2.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so:vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so:vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so \
     vendor/xiaomi/sagit/proprietary/vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so:vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so \
@@ -1024,9 +1140,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libgpustats \
+    libloc_api_v02 \
     libthermalclient \
     libtime_genoff \
-    libloc_api_v02 \
     QtiTelephonyService \
     datastatusnotification \
     embms \
@@ -1034,7 +1150,10 @@ PRODUCT_PACKAGES += \
     imssettings \
     radioconfig \
     CNEService \
+    com.qualcomm.location \
+    dpmserviceapp \
     qcrilmsgtunnel \
     TimeService \
     colorservice \
-    qcrilhook
+    qcrilhook \
+    vendor.qti.hardware.alarm-V1.0-java
